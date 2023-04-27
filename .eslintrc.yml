@@ -24,6 +24,7 @@ parserOptions:
     - .vue
 plugins:
   - import
+  - tsdoc
   - html
   - yaml
   - vue
@@ -45,6 +46,7 @@ rules:
   '@typescript-eslint/triple-slash-reference': off
   import/default: off
   import/no-default-export: off
+  tsdoc/syntax: warn
   vue/html-self-closing:
     - error
     - html:
