@@ -63,7 +63,7 @@ When you use this template, try follow the checklist to update your info properl
 
 - for Vue3
   - [vite-vuetify-ts-starter](https://github.com/logue/vite-vuetify-ts-starter) - With Vuetify3
-  - vite-elemental-plus-ts-starter - Comming soon.
+  - [vite-element-plus-ts-starter](https://github.com/logue/vite-element-plus-ts-starter) - with Element Plus
   - vite-bootstrap-vue-ts-starter - Comming soon.
 - for Vue2
   - [vite-vue2-ts-starter](https://github.com/logue/vite-vue2-ts-starter) - Vite Vue2 starter.
