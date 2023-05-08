@@ -84,7 +84,7 @@
     "vite": "^4.3.5",
     "vite-plugin-checker": "^0.6.0",
     "vitest": "^0.31.0",
-    "vue-tsc": "^1.6.4"
+    "vue-tsc": "~1.6.4"
   },
   "husky": {
     "hooks": {
@@ -102,6 +102,6 @@
     "yaml": "^2.2.2"
   },
   "stackblitz": {
-    "startCommand": "yarn run test"
+    "startCommand": "yarn run test:unit"
   }
 }

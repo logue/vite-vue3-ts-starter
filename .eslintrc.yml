@@ -1,7 +1,6 @@
 env:
   browser: true
   es2022: true
-  node: true
 extends:
   - plugin:vue/vue3-recommended
   - standard-with-typescript
@@ -10,6 +9,7 @@ extends:
   - plugin:vuejs-accessibility/recommended
   - plugin:yaml/recommended
   - '@vue/eslint-config-prettier'
+overrides: []
 parser: vue-eslint-parser
 parserOptions:
   ecmaVersion: latest
