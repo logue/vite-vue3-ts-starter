@@ -35,7 +35,7 @@ rules:
     - error
     - default: array
     - readonly: array
-  '@typescript-eslint/ban-ts-comment': off
+  '@typescript-eslint/ban-ts-comment': off # Enable @ts-ignore etc.
   '@typescript-eslint/explicit-function-return-type': off
   '@typescript-eslint/no-confusing-void-expression': off
   '@typescript-eslint/no-dynamic-delete': off
@@ -43,9 +43,9 @@ rules:
   '@typescript-eslint/no-floating-promises': off
   '@typescript-eslint/prefer-nullish-coalescing': off
   '@typescript-eslint/strict-boolean-expressions': off
-  '@typescript-eslint/triple-slash-reference': off
-  import/default: off
-  import/no-default-export: off
+  '@typescript-eslint/triple-slash-reference': off # Vite env.d.ts fix
+  import/default: off # Fix for Vue setup sytle
+  import/no-default-export: off # Fix for Vue setup style
   tsdoc/syntax: warn
   vue/html-self-closing:
     - error
