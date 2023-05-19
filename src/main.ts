@@ -4,11 +4,13 @@
 
 // Load vue core
 import { createApp } from 'vue';
+
+import App from './App.vue';
+
 import router from '@/router';
 import stores from '@/stores';
 
 // Load Layout vue.
-import App from './App.vue';
 import '@/assets/main.css';
 
 /** Register Vue */
@@ -22,4 +24,6 @@ router
   .then(() => {
     vue.mount('#app');
   })
-  .catch(e => console.error(e));
+  .catch(e => {
+    console.error(e);
+  });
