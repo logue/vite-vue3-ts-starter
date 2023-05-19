@@ -36,6 +36,9 @@ rules:
     - error
     - prefer: type-imports
   '@typescript-eslint/explicit-function-return-type': off # Fix for pinia
+  '@typescript-eslint/no-confusing-void-expression':
+    - error
+    - ignoreArrowShorthand: true # Allow short land for pretter
   '@typescript-eslint/strict-boolean-expressions': off # Fix for vite import.meta.env
   '@typescript-eslint/triple-slash-reference': off # Fix for vite env.d.ts.
   import/default: off # Fix for Vue setup style

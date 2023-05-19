@@ -24,6 +24,4 @@ router
   .then(() => {
     vue.mount('#app');
   })
-  .catch(e => {
-    console.error(e);
-  });
+  .catch(e => console.error(e));
