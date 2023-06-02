@@ -3,12 +3,12 @@
  */
 
 // Load vue core
+import stores from '@/stores';
 import { createApp } from 'vue';
 
 import App from './App.vue';
 
 import router from '@/router';
-import stores from '@/stores';
 
 // Load Layout vue.
 import '@/assets/main.css';

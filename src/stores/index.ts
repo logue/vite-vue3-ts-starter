@@ -2,7 +2,7 @@ import { createPinia, type Pinia } from 'pinia';
 
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 
-// Pinia Stores
+// Pinia Store
 import useCounter from '@/stores/CounterStore';
 
 /** Pinia Store */
