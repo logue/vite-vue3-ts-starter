@@ -25,7 +25,6 @@ parserOptions:
 plugins:
   - import
   - tsdoc
-  - html
   - yaml
   - vue
 rules:
@@ -49,7 +48,7 @@ rules:
         ['builtin', 'external', 'parent', 'sibling', 'index', 'object', 'type']
       pathGroups:
         # Vue Core
-        - pattern: '{vue,vue-router,pinia,@/stores,vue-i18n,vite,vitest,vitest/**,@vitejs/**,@vue/**}'
+        - pattern: '{vue,vue-router,vuex,@/stores,vue-i18n,pinia,vite,vitest,vitest/**,@vitejs/**,@vue/**}'
           group: external
           position: before
         # Internal Codes
@@ -66,7 +65,7 @@ rules:
     - error
     - html:
         void: always
-  vue/multi-word-component-names: warn # Mitigate non-multi-word-component-names errors to warn.
+  vue/multi-word-component-names: warn # Mitigate non-multiword component name errors to warnings.
 settings:
   import/parsers:
     '@typescript-eslint/parser':

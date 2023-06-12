@@ -14,7 +14,7 @@ import viteConfig from './vite.config';
 export default mergeConfig(
   viteConfig,
   defineConfig({
-    plugins: [vue() as any],
+    plugins: [vue()],
     test: {
       environment: 'jsdom',
       exclude: [...configDefaults.exclude, 'e2e/*'],
@@ -23,5 +23,5 @@ export default mergeConfig(
         web: [/\.[jt]sx$/],
       },
     },
-  })
+  } as any)
 );

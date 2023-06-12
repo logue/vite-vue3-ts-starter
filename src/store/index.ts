@@ -3,7 +3,7 @@ import { createPinia, type Pinia } from 'pinia';
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 
 // Pinia Store
-import useCounter from '@/stores/CounterStore';
+import useCounter from '@/store/CounterStore';
 
 /** Pinia Store */
 const pinia: Pinia = createPinia();
