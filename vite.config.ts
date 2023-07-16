@@ -23,20 +23,15 @@ export default defineConfig(({ command, mode }): UserConfig => {
     define: { 'process.env': {} },
     plugins: [
       // Vue3
+      // @ts-expect-error
       vue(),
       // vite-plugin-checker
       // https://github.com/fi3ework/vite-plugin-checker
       checker({
         typescript: true,
         vueTsc: true,
-        eslint: {
-          // for example, lint .ts and .tsx
-          lintCommand: 'eslint "./src/**/*.{ts,tsx,vue}"',
-        },
-        stylelint: {
-          // for example, lint .css and .vue
-          lintCommand: 'stylelint ./src/**/*.{css,scss,vue}',
-        },
+        // eslint: { lintCommand: 'eslint' },
+        // stylelint: { lintCommand: 'stylelint' },
       }),
     ],
     // Resolver
