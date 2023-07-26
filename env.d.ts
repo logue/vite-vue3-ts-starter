@@ -1,4 +1,5 @@
 /// <reference types="vite/client" />
+/// <reference types="vitest" />
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface ImportMetaEnv {
