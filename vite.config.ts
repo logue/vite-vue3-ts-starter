@@ -23,7 +23,6 @@ export default defineConfig(({ command, mode }): UserConfig => {
     define: { 'process.env': {} },
     plugins: [
       // Vue3
-      // @ts-expect-error
       vue(),
       // vite-plugin-checker
       // https://github.com/fi3ework/vite-plugin-checker
