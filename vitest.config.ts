@@ -14,10 +14,7 @@ import viteConfig from './vite.config';
 export default mergeConfig(
   viteConfig,
   defineConfig({
-    plugins: [
-      // @ts-expect-error
-      vue(),
-    ],
+    plugins: [vue()],
     // Resolver
     resolve: {
       // https://vitest.dev/config/#alias
