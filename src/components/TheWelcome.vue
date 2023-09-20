@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import WelcomeItem from './WelcomeItem.vue';
-import CommunityIcon from './icons/IconCommunity.vue';
-import DocumentationIcon from './icons/IconDocumentation.vue';
-import EcosystemIcon from './icons/IconEcosystem.vue';
-import SupportIcon from './icons/IconSupport.vue';
-import ToolingIcon from './icons/IconTooling.vue';
+import WelcomeItem from '@/components/WelcomeItem.vue';
+import CommunityIcon from '@/components/icons/IconCommunity.vue';
+import DocumentationIcon from '@/components/icons/IconDocumentation.vue';
+import EcosystemIcon from '@/components/icons/IconEcosystem.vue';
+import SupportIcon from '@/components/icons/IconSupport.vue';
+import ToolingIcon from '@/components/icons/IconTooling.vue';
 </script>
 
 <template>
@@ -50,7 +50,7 @@ import ToolingIcon from './icons/IconTooling.vue';
     . If you need to test your components and web pages, check out
     <a href="https://www.cypress.io/" target="_blank" rel="noopener">Cypress</a>
     and
-    <a href="https://on.cypress.io/component" target="_blank">
+    <a href="https://on.cypress.io/component" target="_blank" rel="noopener">
       Cypress Component Testing
     </a>
     .
