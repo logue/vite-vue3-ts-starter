@@ -7,7 +7,6 @@ import { defineConfig, type UserConfig } from 'vite';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { checker } from 'vite-plugin-checker';
 
-// @ts-expect-error
 import pkg from './package.json';
 
 /**
