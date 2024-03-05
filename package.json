@@ -22,7 +22,7 @@
     "node": ">=18.12.5",
     "yarn": ">=1.22.19"
   },
-  "packageManager": "yarn@4.1.0",
+  "packageManager": "yarn@4.1.1",
   "scripts": {
     "dev": "vite",
     "clean": "rimraf ./node_modules/.vite",
