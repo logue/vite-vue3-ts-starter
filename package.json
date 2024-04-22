@@ -19,7 +19,7 @@
     "url": "https://github.com/logue/vite-vue3-ts-starter/issues"
   },
   "engines": {
-    "node": ">=18.12.5",
+    "node": ">=20.1.3",
     "yarn": ">=1.22.19"
   },
   "packageManager": "yarn@4.1.1",
