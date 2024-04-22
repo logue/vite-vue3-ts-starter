@@ -14,7 +14,6 @@ import store from '@/store';
 import '@/assets/main.css';
 
 /** Register Vue */
-// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 const vue = createApp(App);
 vue.use(router);
 vue.use(store);
