@@ -1,15 +1,17 @@
 import eslint from '@eslint/js';
-import eslintConfigPrettier from 'eslint-config-prettier';
 import tseslint from 'typescript-eslint';
+import configPrettier from 'eslint-config-prettier';
 
 import pluginImport from 'eslint-plugin-import';
 import pluginTsdoc from 'eslint-plugin-tsdoc';
 import pluginVue from 'eslint-plugin-vue';
+import pluginVueA11y from 'eslint-plugin-vuejs-accessibility';
 import pluginYaml from 'eslint-plugin-yaml';
 
 /**
  * ESLint Config
  */
+// @ts-check
 export default tseslint.config(
   {
     ignores: [
@@ -24,9 +26,12 @@ export default tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   ...tseslint.configs.stylistic,
+  ...pluginVue.configs['flat/recommended'],
+  ...pluginVueA11y.configs['flat/recommended'],
   {
     languageOptions: {
       parserOptions: {
+        parser: tseslint.parser,
         project: [
           'tsconfig.app.json',
           'tsconfig.node.json',
@@ -42,7 +47,6 @@ export default tseslint.config(
       import: pluginImport,
       tsdoc: pluginTsdoc,
       yaml: pluginYaml,
-      vue: pluginVue,
     },
     settings: {
       // This will do the trick
@@ -67,8 +71,6 @@ export default tseslint.config(
       },
     },
     rules: {
-      '@typescript-eslint/consistent-type-imports': 'error',
-      '@typescript-eslint/no-import-type-side-effects': 'error',
       // ...importPlugin.configs["recommended"].rules,
       'no-unused-vars': 'warn',
       // const lines: string[] = []; style
@@ -127,7 +129,7 @@ export default tseslint.config(
             // Vue Core
             {
               pattern:
-                '{vue,vue-router,vuex,@/stores,vue-i18n,pinia,vite,vitest,vitest/**,@vitejs/**,@vue/**}',
+                '{vue,vue-router,vuex,@/store,vue-i18n,pinia,vite,vitest,vitest/**,@vitejs/**,@vue/**}',
               group: 'external',
               position: 'before',
             },
@@ -159,6 +161,5 @@ export default tseslint.config(
       'vue/multi-word-component-names': 'warn',
     },
   },
-  // ...pluginVue.configs['flat/recommended'],
-  eslintConfigPrettier
+  configPrettier
 );
