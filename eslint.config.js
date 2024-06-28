@@ -17,10 +17,11 @@ export default tseslint.config(
     ignores: [
       '.vscode/',
       '.yarn/',
+      'coverage/',
       'dist/',
+      'eslint.config.js',
       'public/',
       'src/**/*.generated.*',
-      'eslint.config.js',
     ],
   },
   eslint.configs.recommended,
