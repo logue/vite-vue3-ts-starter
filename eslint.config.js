@@ -20,6 +20,7 @@ export default tseslint.config(
       'coverage/',
       'dist/',
       'eslint.config.js',
+      'pnpm-lock.yaml',
       'public/',
       'src/**/*.generated.*',
     ],
