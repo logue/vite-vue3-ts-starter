@@ -1,22 +1,14 @@
-/**
- * Vue3 Main script
- */
+import './assets/main.css';
 
-import store from '@/store';
+import { createPinia } from 'pinia';
 import { createApp } from 'vue';
 
 import App from './App.vue';
+import router from './router';
 
-import router from '@/router';
-import '@/assets/main.css';
+const app = createApp(App);
 
-/** Register Vue */
-const vue = createApp(App);
-vue.use(router);
-vue.use(store);
+app.use(createPinia());
+app.use(router);
 
-// Run!
-router
-  .isReady()
-  .then(() => vue.mount('#app'))
-  .catch(e => console.error(e));
+app.mount('#app');

@@ -6,6 +6,7 @@ import { defineConfig, type UserConfig } from 'vite';
 
 import { visualizer } from 'rollup-plugin-visualizer';
 import { checker } from 'vite-plugin-checker';
+import vueDevTools from 'vite-plugin-vue-devtools';
 
 import pkg from './package.json';
 
@@ -23,23 +24,24 @@ export default defineConfig(({ command, mode }): UserConfig => {
     plugins: [
       // Vue3
       vue(),
+      vueDevTools(),
       // vite-plugin-checker
       // https://github.com/fi3ework/vite-plugin-checker
       checker({
-        typescript: true,
+        typescript: true
         // vueTsc: true,
         // eslint: { lintCommand: 'eslint' },
         // stylelint: { lintCommand: 'stylelint' },
-      }),
+      })
     ],
     // Resolver
     resolve: {
       // https://vitejs.dev/config/shared-options.html#resolve-alias
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
-        '~': fileURLToPath(new URL('./node_modules', import.meta.url)),
+        '~': fileURLToPath(new URL('./node_modules', import.meta.url))
       },
-      extensions: ['.js', '.json', '.jsx', '.mjs', '.ts', '.tsx', '.vue'],
+      extensions: ['.js', '.json', '.jsx', '.mjs', '.ts', '.tsx', '.vue']
     },
     // Build Options
     // https://vitejs.dev/config/build-options.html
@@ -56,7 +58,7 @@ export default defineConfig(({ command, mode }): UserConfig => {
         output: {
           manualChunks: {
             // Split external library from transpiled code.
-            vue: ['vue', 'vue-router', 'pinia', 'pinia-plugin-persistedstate'],
+            vue: ['vue', 'vue-router', 'pinia', 'pinia-plugin-persistedstate']
           },
           plugins: [
             mode === 'analyze'
@@ -64,17 +66,17 @@ export default defineConfig(({ command, mode }): UserConfig => {
                 // https://github.com/btd/rollup-plugin-visualizer
                 visualizer({
                   open: true,
-                  filename: 'dist/stats.html',
+                  filename: 'dist/stats.html'
                 })
-              : undefined,
-          ],
-        },
-      },
+              : undefined
+          ]
+        }
+      }
     },
     esbuild: {
       // Drop console when production build.
-      drop: command === 'serve' ? [] : ['console'],
-    },
+      drop: command === 'serve' ? [] : ['console']
+    }
   };
 
   // Write meta data.
