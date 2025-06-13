@@ -61,9 +61,12 @@ export default defineConfig(({ command, mode }): UserConfig => {
             if (
               id.includes('/node_modules/@vue/') ||
               id.includes('/node_modules/vue') ||
-              id.includes('/node_modules/pinia')
+              id.includes('/node_modules/pinia') ||
+              id.includes('/node_modules/destr/') || // pinia-plugin-persistedstate uses destr.
+              id.includes('/node_modules/deep-pick-omit/') // pinia-plugin-persistedstate uses deep-pick-omit.
             ) {
-              // combine vue and pinia into a single chunk
+              // Combine Vue and Pinia into a single chunk.
+              // This is because Pinia is a state management library for Vue.
               return 'vue';
             }
 
