@@ -56,9 +56,18 @@ export default defineConfig(({ command, mode }): UserConfig => {
       // https://vitejs.dev/config/build-options.html#build-rollupoptions
       rollupOptions: {
         output: {
-          manualChunks: {
+          manualChunks: (id: string) => {
             // Split external library from transpiled code.
-            vue: ['vue', 'vue-router', 'pinia', 'pinia-plugin-persistedstate']
+            if (
+              id.includes('/node_modules/@vue/') ||
+              id.includes('/node_modules/vue') ||
+              id.includes('/node_modules/pinia')
+            ) {
+              // combine vue and pinia into a single chunk
+              return 'vue';
+            }
+
+            return 'vendor';
           },
           plugins: [
             mode === 'analyze'
