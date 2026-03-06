@@ -27,9 +27,9 @@ export default defineConfigWithVueTs(
   ...pluginVue.configs['flat/recommended'],
   ...pluginVueA11y.configs['flat/recommended'],
   vueTsConfigs.recommended,
-
   pluginImport.flatConfigs.recommended,
   pluginImport.flatConfigs.typescript,
+  pluginSecurity.configs.recommended,
   {
     settings: {
       // This will do the trick
@@ -150,7 +150,6 @@ export default defineConfigWithVueTs(
     files: ['src/**/__tests__/*']
   },
 
-  ...pluginOxlint.configs['flat/recommended'],
-  pluginSecurity.configs.recommended,
+  ...pluginOxlint.buildFromOxlintConfigFile('.oxlintrc.json'),
   configPrettier
 );
