@@ -17,6 +17,12 @@ When the development server runs, it is checked in real-time by [vite-plugin-che
 
 First, define `VITE_APP_TITLE` in your `.env` file.
 
+## AI Agent Guidance
+
+This repository includes [AGENT.md](AGENT.md), a guideline document for coding agents such as GitHub Copilot, Claude, and Cursor.
+
+If you use an AI coding agent in this project, make sure it follows [AGENT.md](AGENT.md) together with [.github/copilot-instructions.md](.github/copilot-instructions.md).
+
 ## 🚀 Quick Start
 
 ### Installation
@@ -111,6 +117,7 @@ When using this template, follow the checklist to update your info properly.
 - [ ] Change the author name in `LICENSE`
 - [ ] Change the favicon in `public`
 - [ ] Remove the `.github` folder which contains funding info
+- [ ] Review and adapt `AGENT.md` for your project conventions
 - [ ] Clean up the READMEs and remove routes
 
 ## 🔗 Related Projects

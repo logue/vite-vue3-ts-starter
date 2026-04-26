@@ -17,6 +17,12 @@
 
 `.env` ファイルで `VITE_APP_TITLE` を定義してください。
 
+## AI エージェント向けガイド
+
+このリポジトリには、GitHub Copilot / Claude / Cursor などのコーディングエージェント向けガイドラインとして [AGENT.md](AGENT.md) が含まれています。
+
+このプロジェクトで AI コーディングエージェントを使う場合は、[AGENT.md](AGENT.md) と [.github/copilot-instructions.md](.github/copilot-instructions.md) をあわせて参照してください。
+
 ## 🚀 クイックスタート
 
 ### インストール
@@ -111,6 +117,7 @@ Node v21.0.0 を使用している場合、正しく動作しません。21.1.0 
 - [ ] `LICENSE` の作者名を変更
 - [ ] `public` のファビコンを変更
 - [ ] ファンディング情報が含まれる `.github` フォルダを削除
+- [ ] プロジェクトの方針に合わせて `AGENT.md` を見直す
 - [ ] README をクリーンアップし、不要なルートを削除
 
 ## 🔗 関連プロジェクト
