@@ -23,6 +23,30 @@
 
 このプロジェクトで AI コーディングエージェントを使う場合は、[AGENT.md](AGENT.md) と [.github/copilot-instructions.md](.github/copilot-instructions.md) をあわせて参照してください。
 
+## 🤖 AI駆動開発（オプション）
+
+このテンプレートは、[Agent Skills](https://www.skills.sh/)でAI駆動開発にも対応しています。
+
+リポジトリの肥大化とCI/CDのオーバーヘッドを防ぐため、`.agents/` ディレクトリはGitの`.gitignore`から除外されています。
+
+このリポジトリでは、スキル定義とハッシュを `skills-lock.json` で管理し、実際にダウンロードされるスキル本体は各開発者のローカル `.agents/` に配置される想定です。
+
+AIエージェント（例：Claude Code、GitHub Copilot）を使用している場合は、以下のスキルをローカル環境にインストールすることを強くお勧めします。
+
+```bash
+# 初回インストール
+npx skills add https://github.com/hyf0/vue-skills --skill vue-best-practices
+
+# pull 後に lock ファイルを反映（推奨）
+npx skills update
+```
+
+### なぜプリインストールしないのか？（アーキテクチャ設計）
+
+- CI/CDオーバーヘッドゼロ：GitHub ActionsやVercelでのプロダクションビルド時に、数メガバイトもの重複ドキュメントをダウンロードする必要がなくなります。
+
+- スキル運用の安全性向上：アプリ本体とスキルを分離しつつ、`skills-lock.json` によってチーム内で再現性を維持できます。
+
 ## 🚀 クイックスタート
 
 ### インストール
@@ -98,17 +122,9 @@ pnpm test:e2e
 | `build-only`    | チェックなしで本番ビルド（デプロイ用） |
 | `preview`       | 本番ビルドで生成されたプログラムを実行 |
 
-## 🔧 TypeScript での `.vue` インポートサポート
-
-TypeScript はデフォルトで `.vue` インポートの型情報を扱えないため、一般的な Vue コンポーネント型として shim されています。ほとんどの場合、これで問題ありませんが、手動の `h(...)` 呼び出しで props の検証を取得したい場合、VSCode のコマンドパレットから `Volar: Switch TS Plugin on/off` を実行して Volar の `.vue` 型サポートプラグインを有効にできます。
-
-[^1]: [Pinia](https://pinia.vuejs.org/) は、Vuex を置き換える推奨の状態管理ライブラリです。詳細は <https://github.com/vuejs/rfcs/discussions/270#discussioncomment-2066856> を参照してください。
-
 ## 🐛 トラブルシューティング
 
 ファイルを追加または削除するとエラーが発生し、修正しても開発サーバーに反映されない場合があります。その場合は、開発サーバーを停止し、`node_modules/.vite` ディレクトリ内のすべてのファイルを削除してください。`clean` コマンドでも実行できます。
-
-Node v21.0.0 を使用している場合、正しく動作しません。21.1.0 以降にアップグレードしてください。
 
 ## 📝 チェックリスト
 
