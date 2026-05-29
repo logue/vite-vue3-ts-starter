@@ -22,6 +22,7 @@ minimumReleaseAgeExclude:
   - sass-embedded-win32-x64@1.100.0
   - sass-embedded@1.100.0
   - sass@1.100.0
+  - vue-router@5.1.0
 onlyBuiltDependencies:
   - '@parcel/watcher'
   - esbuild
