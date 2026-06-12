@@ -140,7 +140,7 @@ When using this template, follow the checklist to update your info properly.
   - [vite-vuetify-ts-starter](https://github.com/logue/vite-vuetify-ts-starter) - With Vuetify 3
     - [tauri-vuetify-starter](https://github.com/logue/tauri-vuetify-starter) - For cross-platform desktop application use.
   - [vite-element-plus-ts-starter](https://github.com/logue/vite-element-plus-ts-starter) - With Element Plus
-  - [rsbuild-vue3-ts-starter](https://github.com/logue/rsbuild-vue3-ts-starter)
+  - [rsbuild-vue-starter](https://github.com/logue/rsbuild-vue-starter) - Built with Rsbuild stack instead of Vite
   - vite-bootstrap-vue-ts-starter - Coming soon
 - **For Vue 2** (DEPRECATED):
   - [vite-vue2-ts-starter](https://github.com/logue/vite-vue2-ts-starter) - Vite Vue2 starter

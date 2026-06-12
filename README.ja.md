@@ -142,7 +142,7 @@ pnpm test:e2e
   - [vite-vuetify-ts-starter](https://github.com/logue/vite-vuetify-ts-starter) - Vuetify 3 を使用
     - [tauri-vuetify-starter](https://github.com/logue/tauri-vuetify-starter) - クロスプラットフォームのディスクトップアプリ向け
   - [vite-element-plus-ts-starter](https://github.com/logue/vite-element-plus-ts-starter) - Element Plus を使用
-  - [rsbuild-vue3-ts-starter](https://github.com/logue/rsbuild-vue3-ts-starter)
+  - [rsbuild-vue-starter](https://github.com/logue/rsbuild-vue-starter) - Viteの代わりにRsbuildスタックで構築したもの
   - vite-bootstrap-vue-ts-starter - 近日公開
 - **Vue 2 用**（非推奨）:
   - [vite-vue2-ts-starter](https://github.com/logue/vite-vue2-ts-starter) - Vite Vue2 スターター
