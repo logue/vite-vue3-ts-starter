@@ -32,7 +32,6 @@
 ## Pitfalls
 
 - If file add/remove changes are not reflected by Vite, clear cache with `pnpm clean`.
-- Node v21.0.0 is known to be problematic in this project.
 - `src/Meta.ts` is a regular source file that reads build-time constants (`__APP_VERSION__`, `__BUILD_DATE__`) injected via Vite `define`. Do not revert it to a generated file.
 
 ## References
