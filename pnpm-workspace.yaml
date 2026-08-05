@@ -2,9 +2,11 @@ allowBuilds:
   '@parcel/watcher': true
   esbuild: true
   unrs-resolver: true
+overrides:
+  brace-expansion: '>=1.1.18'
 minimumReleaseAgeExclude:
   - prettier@3.9.5
-  - vite@8.1.4 || 8.1.5
+  - vite@8.1.5
   - '@vue/compiler-core@3.5.40'
   - '@vue/compiler-dom@3.5.40'
   - '@vue/compiler-sfc@3.5.40'
@@ -15,6 +17,39 @@ minimumReleaseAgeExclude:
   - '@vue/server-renderer@3.5.40'
   - '@vue/shared@3.5.40'
   - vue@3.5.40
+  - lint-staged@17.2.0
+  - '@oxlint/binding-android-arm-eabi@1.77.0'
+  - '@oxlint/binding-android-arm64@1.77.0'
+  - '@oxlint/binding-darwin-arm64@1.77.0'
+  - '@oxlint/binding-darwin-x64@1.77.0'
+  - '@oxlint/binding-freebsd-x64@1.77.0'
+  - '@oxlint/binding-linux-arm-gnueabihf@1.77.0'
+  - '@oxlint/binding-linux-arm-musleabihf@1.77.0'
+  - '@oxlint/binding-linux-arm64-gnu@1.77.0'
+  - '@oxlint/binding-linux-arm64-musl@1.77.0'
+  - '@oxlint/binding-linux-ppc64-gnu@1.77.0'
+  - '@oxlint/binding-linux-riscv64-gnu@1.77.0'
+  - '@oxlint/binding-linux-riscv64-musl@1.77.0'
+  - '@oxlint/binding-linux-s390x-gnu@1.77.0'
+  - '@oxlint/binding-linux-x64-gnu@1.77.0'
+  - '@oxlint/binding-linux-x64-musl@1.77.0'
+  - '@oxlint/binding-openharmony-arm64@1.77.0'
+  - '@oxlint/binding-win32-arm64-msvc@1.77.0'
+  - '@oxlint/binding-win32-ia32-msvc@1.77.0'
+  - '@oxlint/binding-win32-x64-msvc@1.77.0'
+  - '@typescript-eslint/eslint-plugin@8.66.0'
+  - '@typescript-eslint/parser@8.66.0'
+  - '@typescript-eslint/project-service@8.66.0'
+  - '@typescript-eslint/scope-manager@8.66.0'
+  - '@typescript-eslint/tsconfig-utils@8.66.0'
+  - '@typescript-eslint/type-utils@8.66.0'
+  - '@typescript-eslint/types@8.66.0'
+  - '@typescript-eslint/typescript-estree@8.66.0'
+  - '@typescript-eslint/utils@8.66.0'
+  - '@typescript-eslint/visitor-keys@8.66.0'
+  - eslint-plugin-oxlint@1.77.0
+  - oxlint@1.77.0
+  - typescript-eslint@8.66.0
 onlyBuiltDependencies:
   - '@parcel/watcher'
   - esbuild
