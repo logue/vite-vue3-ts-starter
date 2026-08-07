@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import { fileURLToPath, URL } from 'node:url';
 
 import vue from '@vitejs/plugin-vue';
@@ -7,7 +8,11 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import { checker } from 'vite-plugin-checker';
 import vueDevTools from 'vite-plugin-vue-devtools';
 
-import pkg from './package.json';
+const pkg = JSON.parse(readFileSync('./package.json', 'utf-8')) as {
+  name: string;
+  version: string;
+};
+const buildDate = new Date().toISOString();
 
 /**
  * Vite Configure

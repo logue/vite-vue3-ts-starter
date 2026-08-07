@@ -44,6 +44,7 @@ __screenshots__/
 test-results/
 playwright-report/
 .agents/
+.claude/
 
 *.bak
 *.backup
