@@ -12,7 +12,6 @@ const pkg = JSON.parse(readFileSync('./package.json', 'utf-8')) as {
   name: string;
   version: string;
 };
-const buildDate = new Date().toISOString();
 
 /**
  * Vite Configure
