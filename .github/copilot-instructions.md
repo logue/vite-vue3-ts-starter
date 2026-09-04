@@ -1,50 +1,16 @@
-# Project Guidelines
+# AI Project Instructions
 
-## Build and Test
+This project strictly enforces framework configurations, linter priority, and task-specific workflows via Vercel Skills and the root `AGENTS.md`.
 
-- Use pnpm for all tasks. Do not use npm or yarn in this workspace.
-- Use Node.js version `^20.19.0 || >=22.12.0`.
-- Install dependencies with `pnpm install`.
-- Common commands:
-  - `pnpm dev` for local development
-  - `pnpm type-check` for Vue + TypeScript checking
-  - `pnpm lint` for oxlint + eslint + prettier + stylelint
-  - `pnpm test:unit` for Vitest
-  - `pnpm test:e2e` for Playwright
-  - `pnpm build` for production build
-- When touching runtime behavior, run at least `pnpm type-check` and relevant tests.
+## Mandatory Rule Initialization
 
-## Architecture
+Before generating, modifying, or refactoring any code (especially Vue, Vapor, and Rstack settings), you MUST execute the following command to load the precise coding rules:
 
-- Entry points are `src/main.ts` and `src/App.vue`.
-- Route-level pages belong in `src/views`; reusable UI belongs in `src/components`.
-- Router configuration is centralized in `src/router.ts`.
-- Pinia stores are in `src/stores`.
-- Import path alias `@` points to `src`.
+```bash
+npx skills list
+```
 
-## Conventions
+## Architecture Context
 
-- Prefer Vue 3 SFC with `<script setup lang="ts">`.
-- Keep TypeScript strictness intact; avoid weakening tsconfig rules unless explicitly requested.
-- Respect existing import grouping/order and let lint rules drive final ordering.
-- Keep changes minimal and scoped; avoid broad refactors in template-derived files unless requested.
-
-## Pitfalls
-
-- If file add/remove changes are not reflected by Vite, clear cache with `pnpm clean`.
-- `src/Meta.ts` is a regular source file that reads build-time constants (`__APP_VERSION__`, `__BUILD_DATE__`) injected via Vite `define`. Do not revert it to a generated file.
-
-## References
-
-- Setup, commands, and troubleshooting: `README.md`
-- Japanese documentation: `README.ja.md`
-- Lint rules and import ordering details: `eslint.config.ts`
-- Build behavior and chunking strategy: `vite.config.ts`
-
-## Related Customizations
-
-- Frontend file-specific instruction: `.github/instructions/frontend-vue.instructions.md`
-- Testing file-specific instruction: `.github/instructions/testing.instructions.md`
-- Reusable execution prompt: `.github/prompts/run-safe-change.prompt.md`
-- PR quality gate prompt: `.github/prompts/pre-pr-quality-gate.prompt.md`
-- Release readiness prompt: `.github/prompts/pre-release-readiness.prompt.md`
+- **Linter Priority**: Always prioritize Rslint for auto-fixes over Biome config.
+- **Rules & Examples**: Follow the skills loaded by `npx skills`.

@@ -2,14 +2,16 @@
 
 [English](README.md)
 
-[![GitHub stars](https://img.shields.io/github/stars/logue/vite-vue3-ts-starter.svg)](https://github.com/logue/vite-vue3-ts-starter)
-[![GitHub license](https://img.shields.io/github/license/logue/vite-vue3-ts-starter.svg)](https://github.com/logue/vite-vue3-ts-starter/blob/master/LICENSE)
+[![TypeScript](https://img.shields.io/badge/TypeScript-7-%230074c1.svg)](http://www.typescriptlang.org/)
 [![Node.js Version](https://img.shields.io/badge/node-%5E20.19.0%20%7C%7C%20%3E%3D22.12.0-brightgreen.svg)](https://nodejs.org/)
-[![pnpm](https://img.shields.io/badge/pnpm-10.30.1-orange.svg)](https://pnpm.io/)
+[![pnpm](https://img.shields.io/badge/pnpm-11-pink.svg)](https://pnpm.io/)
+[![Vite](https://img.shields.io/badge/vite-8-purple.svg)](https://vite.dev/)
+[![X Follow](https://img.shields.io/twitter/follow/logue256?style=plastic)](https://x.com/logue256)
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/logue?label=Sponsor&logo=github&color=ea4aaa)](https://github.com/sponsors/logue)
 
-このテンプレートは、Vue 3 と TypeScript を使用して Vite で開発を始めるのに役立ちます。Vue 3 の `<script setup>` SFC を使用しており、[script setup ドキュメント](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) を参照して詳細を確認してください。
+このテンプレートは、Vue 3 と TypeScript を使用して Vite で開発を始めるのに役立ちます。Vue 3 の `<script setup vapor>` SFC を使用しており、[script setup ドキュメント](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) を参照して詳細を確認してください。
 
-[vue-router](https://router.vuejs.org/) と [Pinia](https://pinia.vuejs.org/) [^1] が含まれています。
+[vue-router](https://router.vuejs.org/) と [Pinia](https://pinia.vuejs.org/) が含まれています。
 
 さらに、[ESLint](https://eslint.org/)、[Stylelint](https://stylelint.io/)、[Prettier](https://prettier.io/) が含まれており、実行時とコミット時に自動で実行されるように設定されています。（これらの設定は厳しく設定されているので、必要に応じて緩和してください。）
 
@@ -19,33 +21,7 @@
 
 ## AI エージェント向けガイド
 
-このリポジトリには、GitHub Copilot / Claude / Cursor などのコーディングエージェント向けガイドラインとして [AGENT.md](AGENT.md) が含まれています。
-
-このプロジェクトで AI コーディングエージェントを使う場合は、[AGENT.md](AGENT.md) と [.github/copilot-instructions.md](.github/copilot-instructions.md) をあわせて参照してください。
-
-## 🤖 AI駆動開発（オプション）
-
-このテンプレートは、[Agent Skills](https://www.skills.sh/)でAI駆動開発にも対応しています。
-
-リポジトリの肥大化とCI/CDのオーバーヘッドを防ぐため、`.agents/` ディレクトリはGitの`.gitignore`から除外されています。
-
-このリポジトリでは、スキル定義とハッシュを `skills-lock.json` で管理し、実際にダウンロードされるスキル本体は各開発者のローカル `.agents/` に配置される想定です。
-
-AIエージェント（例：Claude Code、GitHub Copilot）を使用している場合は、以下のスキルをローカル環境にインストールすることを強くお勧めします。
-
-```bash
-# 初回インストール
-npx skills add https://github.com/hyf0/vue-skills --skill vue-best-practices
-
-# pull 後に lock ファイルを反映（推奨）
-npx skills update
-```
-
-### なぜプリインストールしないのか？（アーキテクチャ設計）
-
-- CI/CDオーバーヘッドゼロ：GitHub ActionsやVercelでのプロダクションビルド時に、数メガバイトもの重複ドキュメントをダウンロードする必要がなくなります。
-
-- スキル運用の安全性向上：アプリ本体とスキルを分離しつつ、`skills-lock.json` によってチーム内で再現性を維持できます。
+このリポジトリには、GitHub Copilot / Claude / Cursor などのコーディングエージェント向けガイドラインとして [AGENTS.md](AGENTS.md) が含まれています。
 
 ## 🚀 クイックスタート
 
@@ -103,24 +79,26 @@ pnpm test:e2e
 
 このテンプレートは [create-vue](https://github.com/vuejs/create-vue-templates/tree/main/typescript-router-pinia-vitest-playwright-eslint) のコマンドに近づけて設計されています。
 
-| コマンド        | 説明                                   |
-| --------------- | -------------------------------------- |
-| `dev`           | 開発サーバーを起動                     |
-| `clean`         | 開発サーバーのキャッシュをクリア       |
-| `type-check`    | Vue マークアップをチェック             |
-| `lint`          | すべてのリンターを実行                 |
-| `lint:oxlint`   | oxlint を実行                          |
-| `lint:eslint`   | ESLint を実行                          |
-| `lint:style`    | Stylelint を実行                       |
-| `test`          | Vitest を実行                          |
-| `test:unit`     | ユニットテストを実行                   |
-| `test:coverage` | カバレッジレポートを出力               |
-| `test:e2e`      | E2E テストを実行                       |
-| `build`         | 本番用ビルド                           |
-| `build:analyze` | Bundle Analyzer を実行                 |
-| `build:clean`   | 本番ビルドファイルをクリア             |
-| `build-only`    | チェックなしで本番ビルド（デプロイ用） |
-| `preview`       | 本番ビルドで生成されたプログラムを実行 |
+| コマンド        | 説明                                     |
+| --------------- | ---------------------------------------- |
+| `dev`           | 開発サーバーを起動                       |
+| `clean`         |                                          |
+| `lint`          | すべてのリンターを実行                   |
+| `lint:oxlint`   | oxlint を実行                            |
+| `lint:eslint`   | ESLint を実行                            |
+| `lint:style`    | Stylelint を実行                         |
+| `test`          | Vitest を実行                            |
+| `test:unit`     | ユニットテストを実行                     |
+| `test:coverage` | カバレッジレポートを出力                 |
+| `test:e2e`      | E2E テストを実行                         |
+| `build`         | 本番用ビルド                             |
+| `build:analyze` | Bundle Analyzer を実行                   |
+| `build:clean`   | 本番ビルドファイルをクリア               |
+| `build-only`    | チェックなしで本番ビルド（デプロイ用）   |
+| `clean`         | 成果物をクリア                           |
+| `clean:hard`    | 成果物と開発サーバーのキャッシュをクリア |
+| `type-check`    | Vue マークアップをチェック               |
+| `preview`       | 本番ビルドで生成されたプログラムを実行   |
 
 ## 🐛 トラブルシューティング
 
