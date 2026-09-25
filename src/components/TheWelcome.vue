@@ -34,12 +34,13 @@ const openReadmeInEditor = () => fetch('/__open-in-editor?file=README.md');
       href="https://vite.dev/guide/features.html"
       rel="noopener"
       target="_blank"
-      >Rsbuild</a
+      >Vite</a
     >
     . The recommended IDE setup is
-    <a href="https://code.visualstudio.com/" rel="noopener" target="_blank"
-      >VSCode</a
-    >
+    <!-- oxfmt-ignore -->
+    <a href="https://code.visualstudio.com/" rel="noopener" target="_blank">
+      VSCode
+    </a>
     +
     <a
       href="https://github.com/vuejs/language-tools"

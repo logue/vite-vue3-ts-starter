@@ -5,6 +5,7 @@ import { createApp } from 'vue';
 
 import App from '@/App.vue';
 import router from '@/router';
+export { Meta } from '@/types/Meta';
 
 const app = createApp(App);
 
