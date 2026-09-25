@@ -1,16 +1,23 @@
 # AI Project Instructions
 
-This project strictly enforces framework configurations, linter priority, and task-specific workflows via Vercel Skills and the root `AGENTS.md`.
+Follow the root `AGENTS.md` first. It covers commands, source conventions, and which configuration files are the source of truth.
 
-## Mandatory Rule Initialization
+## Skills
 
-Before generating, modifying, or refactoring any code (especially Vue, Vapor, and Rstack settings), you MUST execute the following command to load the precise coding rules:
+Vue-specific rules and examples are provided as agent skills from [vuejs-ai/skills](https://github.com/vuejs-ai/skills) in `.agents/skills/` (tracked in `skills-lock.json`):
 
-```bash
-npx skills list
-```
+- `vue-best-practices`: Vue 3, Composition API, `<script setup>`, TypeScript
+- `vue-pinia-best-practices`: Pinia setup stores and state management
+- `vue-router-best-practices`: Vue Router navigation and routing patterns
+- `vue-testing-best-practices`: Vitest, Vue Test Utils, mocking, and Playwright E2E tests
+- `vue-debug-guides`: Runtime errors, warnings, async failures, and hydration issues
+- `create-adaptable-composable`: Reusable composables that accept `MaybeRef` / `MaybeRefOrGetter` inputs
 
-## Architecture Context
+Before generating, modifying, or refactoring Vue code, read the relevant `SKILL.md` under `.agents/skills/`. Run `pnpm skills:update` to update them.
 
-- **Linter Priority**: Always prioritize Rslint for auto-fixes over Biome config.
-- **Rules & Examples**: Follow the skills loaded by `npx skills`.
+## Key points
+
+- Use `<script lang="ts" setup vapor>` for Vue SFCs.
+- Lint with Oxlint and format with Oxfmt (`pnpm lint`). ESLint, Prettier, and Stylelint are not used; do not add them back.
+- Add lint rules to `.oxlintrc.json` and formatting or import-sorting options to `.oxfmtrc.json`.
+- Use `pnpm` only.

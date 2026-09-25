@@ -5,3 +5,7 @@ allowBuilds:
   '@parcel/watcher': true
   esbuild: true
   unrs-resolver: true
+# ESLint is not used. Oxlint JS plugins only reference `eslint` for types,
+# so skip the auto-installed peer dependency.
+overrides:
+  eslint: '-'

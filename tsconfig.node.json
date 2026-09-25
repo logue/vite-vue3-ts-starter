@@ -5,8 +5,7 @@
     "vite.config.*",
     "vitest.config.*",
     "cypress.config.*",
-    "playwright.config.*",
-    "eslint.config.*"
+    "playwright.config.*"
   ],
   "compilerOptions": {
     // Most tools use transpilation instead of Node.js's native type-stripping.
@@ -14,10 +13,6 @@
     "module": "preserve",
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
-    // Include Node.js types and avoid accidentally including other `@types/*` packages.
-    "types": [
-      "node"
-    ],
     // Disable emitting output during `vue-tsc --build`, which is used for type-checking only.
     "noEmit": true,
     // `vue-tsc --build` produces a .tsbuildinfo file for incremental type-checking.

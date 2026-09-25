@@ -13,7 +13,7 @@
 
 [vue-router](https://router.vuejs.org/) と [Pinia](https://pinia.vuejs.org/) が含まれています。
 
-さらに、[ESLint](https://eslint.org/)、[Stylelint](https://stylelint.io/)、[Prettier](https://prettier.io/) が含まれており、実行時とコミット時に自動で実行されるように設定されています。（これらの設定は厳しく設定されているので、必要に応じて緩和してください。）
+さらに、[Oxlint](https://oxc.rs/docs/guide/usage/linter)、[Oxfmt](https://oxc.rs/docs/guide/usage/formatter) が含まれており、実行時とコミット時に自動で実行されるように設定されています。（これらの設定は厳しく設定されているので、必要に応じて緩和してください。）
 
 開発サーバーの実行時には、[vite-plugin-checker](https://github.com/fi3ework/vite-plugin-checker) によってリアルタイムでチェックされます。
 
@@ -56,7 +56,7 @@ pnpm test:e2e
 
 - **Vue 3** + **TypeScript** + **Vite** の組み合わせ
 - **vue-router** と **Pinia** によるルーティングと状態管理
-- **ESLint**、**Stylelint**、**Prettier** によるコード品質管理
+- **Oxlint**、**Oxfmt** によるコード品質管理
 - **Vitest** によるユニットテスト
 - **Playwright** による E2E テスト
 - **vite-plugin-checker** によるリアルタイム型チェック
@@ -85,8 +85,7 @@ pnpm test:e2e
 | `clean`         |                                          |
 | `lint`          | すべてのリンターを実行                   |
 | `lint:oxlint`   | oxlint を実行                            |
-| `lint:eslint`   | ESLint を実行                            |
-| `lint:style`    | Stylelint を実行                         |
+| `lint:oxfmt`    | oxfmt でフォーマット                     |
 | `test`          | Vitest を実行                            |
 | `test:unit`     | ユニットテストを実行                     |
 | `test:coverage` | カバレッジレポートを出力                 |

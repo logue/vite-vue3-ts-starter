@@ -16,7 +16,7 @@ This template helps you get started developing with Vue 3 and TypeScript in Vite
 
 Includes [vue-router](https://router.vuejs.org/) and [Pinia](https://pinia.vuejs.org/).
 
-Additionally, [ESLint](https://eslint.org/), [Stylelint](https://stylelint.io/), and [Prettier](https://prettier.io/) are included and set to run automatically at runtime and on commit. (These settings are strict, so relax them as needed.)
+Additionally, [Oxlint](https://oxc.rs/docs/guide/usage/linter) and [Oxfmt](https://oxc.rs/docs/guide/usage/formatter) are included and set to run automatically at runtime and on commit. (These settings are strict, so relax them as needed.)
 
 When the development server runs, it is checked in real-time by [vite-plugin-checker](https://github.com/fi3ework/vite-plugin-checker).
 
@@ -59,7 +59,7 @@ pnpm test:e2e
 
 - **Vue 3** + **TypeScript** + **Vite** combination
 - Routing and state management with **vue-router** and **Pinia**
-- Code quality management with **ESLint**, **Stylelint**, and **Prettier**
+- Code quality management with **Oxlint** and **Oxfmt**
 - Unit testing with **Vitest**
 - E2E testing with **Playwright**
 - Real-time type checking with **vite-plugin-checker**
@@ -87,8 +87,7 @@ Designed to be close to [create-vue](https://github.com/vuejs/create-vue-templat
 | `dev`           | Start development server                           |
 | `lint`          | Run all linters                                    |
 | `lint:oxlint`   | Run oxlint                                         |
-| `lint:eslint`   | Run ESLint                                         |
-| `lint:style`    | Run Stylelint                                      |
+| `lint:oxfmt`    | Format with oxfmt                                  |
 | `test`          | Run Vitest                                         |
 | `test:unit`     | Run unit tests                                     |
 | `test:coverage` | Output coverage report                             |
