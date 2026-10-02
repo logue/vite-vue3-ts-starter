@@ -1,5 +1,31 @@
 {
   "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "ignorePatterns": [
+    // AI agents skill docs.
+    "**/.agents/**",
+    // Build intermediate artifacts.
+    "**/.cache/**",
+    "**/.data/**",
+    "**/.mf/**",
+    "**/.nitro/**",
+    "**/.nuxt/**",
+    "**/.output/**",
+    "**/.rstack/**",
+    // Test coverage reports.
+    "**/coverage/**",
+    "**/reports",
+    "**/test-results",
+    // Build artifacts.
+    "**/demo/**",
+    "**/dist-ssr/**",
+    "**/dist/**",
+    "**/docs/**",
+    "**/storybook-static/**",
+    // Grit (Biome Rules) source artifacts.
+    "**/grit/**",
+    // Node modules.
+    "**/node_modules/**"
+  ],
   "printWidth": 80,
   "tabWidth": 2,
   "useTabs": false,
@@ -13,7 +39,10 @@
   "sortPackageJson": true,
   "sortImports": {
     "newlinesBetween": true,
-    "internalPattern": ["@/", "~/"],
+    "internalPattern": [
+      "@/",
+      "~/"
+    ],
     "customGroups": [
       {
         "groupName": "framework",
@@ -37,18 +66,13 @@
       "framework",
       "external",
       "internal",
-      ["parent", "sibling", "index"],
+      [
+        "parent",
+        "sibling",
+        "index"
+      ],
       "type",
       "unknown"
     ]
-  },
-  "ignorePatterns": [
-    ".agents/",
-    "coverage/",
-    "dist/",
-    "pnpm-lock.yaml",
-    "public/assets/",
-    "playwright-report/",
-    "test-results/"
-  ]
+  }
 }
