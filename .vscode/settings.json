@@ -1,9 +1,8 @@
 {
   "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.oxc": "explicit"
-  },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
   "[javascript]": {
     "editor.defaultFormatter": "oxc.oxc-vscode"
   },
@@ -17,6 +16,8 @@
     "editor.defaultFormatter": "oxc.oxc-vscode"
   },
   "oxc.disableNestedConfig": true,
-  "oxc.fmt.disableNestedConfig": true,
-  "editor.formatOnSaveMode": "file"
+  "js/ts.preferences.importModuleSpecifierEnding": "js",
+  "js/ts.reportStyleChecksAsWarnings": false,
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+  "js/ts.experimental.useTsgo": true,
 }
